@@ -14,6 +14,9 @@ export const typeOrmConfig: DataSourceOptions = {
   synchronize: true,
   migrations: ['dist/migrations/*{.ts,.js}'],
   dropSchema: false,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 };
 
 export const AppDataSource = new DataSource(typeOrmConfig);
